@@ -1,14 +1,19 @@
+import enum
 import random
 def Random(n):
     a=list()
     for i in range(n):
-        b=random.randint(1,10)
+        b=random.randrange(1,100,2)
         a.append(b)
     return a
 def min(a):
     a.sort()
-    return a
-n=int(input())
-print(Random(n))
-print(min(Random(n)))
+    for id,value in enumerate(a):
+        if id==0: break;
+    return value
+n=random.randint(2,10)
+print("n=%i"%n)
+a=Random(n)
+print(a)
+print(min(a))
 

@@ -1,4 +1,3 @@
-import enum
 import random
 def Random(n):
     a=list()

@@ -1,15 +1,21 @@
 def check(l):
-    a=l
-    l=l.sort()
-    if a==l:
-        return True
-    return False
+      a=list()
+      for j in range(len(l)):
+            a.append(l[j])
+      print(a)
+      l.sort()
+      for i in l:
+        if l.index(i)==a.index(i):
+            bo=True
+        else:
+            bo=False
+      return bo
 l=list()
 while True:
-    n=int(input())
-    if n==0: break
-    l.append(n)
+  n=int(input())
+  if n==0: break
+  l.append(n)
 if check(l):
-    print("List is sorted")
+  print("List is sorted: ")
 else:
-    print("List isn't sorted")
+  print("List is not sorted: ")

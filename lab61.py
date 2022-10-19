@@ -63,7 +63,6 @@ class Resume():
 resume=Resume()
 resume.get_resume()
 akbala=(resume.get_person().first_name,resume.get_person().get_last_name(),resume.get_skills().get_Skill())
-
 employee={}
 for i in range(3):
     skill=input()
@@ -71,6 +70,15 @@ for i in range(3):
 for j in range(len(employee)):
     if employee[j] in akbala[2]:
         print("He/She has " + employee[j])
+new_skill=set()
+new_skill.add("HTML")
+resume.get_skills().set_skill(new_skill)
+print(akbala)
+
+
+
+
+
     
 
 
